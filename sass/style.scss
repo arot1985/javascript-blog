@@ -117,6 +117,7 @@ body {
   }
 }
 
+
 /* Post */
 
 .post {
@@ -134,6 +135,19 @@ body {
 
 .post-author {
   font-style: italic;
+  list-style-type: none;
+
+  a {
+    color: $color-light;
+
+    &:hover {
+      color: #000000;
+    }
+    
+    &:active {
+      color: $color-dark;
+    }
+  }
 }
 
 .post-tags {
