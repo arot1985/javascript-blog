@@ -121,7 +121,7 @@
         console.log(tagLinkHTML);
 
         /* add generated code to html variable */
-        html = html + tagLinkHTML;
+        html = html + ' ' + tagLinkHTML;
 
       /* END LOOP: for each tag */
       }
