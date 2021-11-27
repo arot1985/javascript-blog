@@ -157,6 +157,29 @@ body {
   }
 }
 
+.tag-size-1 {
+  font-size: 30px;
+}
+
+.tag-size-2 {
+  font-size: 40px;
+}
+
+.tag-size-3 {
+  font-size: 50px;
+}
+.tag-size-4 {
+  font-size: 60px;
+}
+
+.tag-size-5 {
+  font-size: 70px;
+}
+
+.tags {
+  display: inline-block;
+}
+
 @media (max-width: 576px) {
   .wrapper {
     flex-direction: column;
