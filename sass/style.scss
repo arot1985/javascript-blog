@@ -158,26 +158,28 @@ body {
 }
 
 .tag-size-1 {
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .tag-size-2 {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .tag-size-3 {
-  font-size: 50px;
+  font-size: 25px;
 }
 .tag-size-4 {
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .tag-size-5 {
-  font-size: 70px;
+  font-size: 40px;
 }
 
-.tags {
+.tags li {
   display: inline-block;
+  padding: 0 2px;
+  
 }
 
 @media (max-width: 576px) {
