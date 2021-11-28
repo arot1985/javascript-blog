@@ -306,6 +306,11 @@ function generateAuthors(){
     /* get author from data-authors attribute */
     const articleAuthors = article.getAttribute('data-authors');
     console.log(articleAuthors);
+    
+
+    /* split authors into array */
+    //const articleAuthorsArray = articleAuthors.split(' ');
+    //console.log(articleAuthorsArray);
 
     /* generate HTML of the link */
       const authorLinkHTML = '<li><a href="#' + articleAuthors + '">' + articleAuthors + '</a></li>';
@@ -321,6 +326,10 @@ function generateAuthors(){
       } else {
         allAuthors[articleAuthors]++;
       }
+
+      /* insert HTML of all the links into the tags wrapper */
+     authorsList.innerHTML = html;
+
     /* END LOOP: for every article: */
     }
   
@@ -360,7 +369,7 @@ function authorsClickHandler(event){
 
   /* make a new constant "authorsHref" and read the attribute "href" of the clicked element */
   const authorsHref = clickedElement.getAttribute("href");
-  console.log('authorshref');
+  console.log(authorsHref);
 
   /* make a new constant "author" and extract tag from the "href" constant */
   const author = authorsHref.replace('#', '');
@@ -394,13 +403,13 @@ function authorsClickHandler(event){
   }
 
   /* execute function "generateTitleLinks" with article selector as argument */
-  generateTitleLinks('[data-author~="' + author + '"]');
+  generateTitleLinks('[data-authors~="' + author + '"]');
 }
 
 function addClickListenersToAuthors(){
   /* find all links to authors */
-  const allLinksToAuthors = document.querySelectorAll('.post-author a, .authors a');
-
+  const allLinksToAuthors = document.querySelectorAll('.authors a, .post-author a');
+  console.log(allLinksToAuthors);
   /* START LOOP: for each link */
   for(let allLinkToAuthors of allLinksToAuthors){
 
